@@ -1,0 +1,13 @@
+<li class="dropdown pull-right" tal:condition="actions" i18n:domain="Kotti">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    <span i18n:translate="">Actions</span>
+    <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li tal:repeat="link actions">
+      <a href="${link.url(context, request)}">
+        ${link.title}
+      </a>
+    </li>
+  </ul>
+</li>
