@@ -1,0 +1,45 @@
+[submodule "cookbooks/python"]
+	path = cookbooks/python
+	url = git://github.com/opscode-cookbooks/python.git
+[submodule "cookbooks/postgresql"]
+	path = cookbooks/postgresql
+	url = git://github.com/opscode-cookbooks/postgresql.git
+[submodule "cookbooks/build-essential"]
+	path = cookbooks/build-essential
+	url = git://github.com/opscode-cookbooks/build-essential.git
+[submodule "cookbooks/git"]
+	path = cookbooks/git
+	url = git://github.com/opscode-cookbooks/git.git
+[submodule "cookbooks/supervisor"]
+	path = cookbooks/supervisor
+	url = git://github.com/opscode-cookbooks/supervisor.git
+[submodule "cookbooks/gunicorn"]
+	path = cookbooks/gunicorn
+	url = git://github.com/opscode-cookbooks/gunicorn.git
+[submodule "cookbooks/varnish"]
+	path = cookbooks/varnish
+	url = git://github.com/opscode-cookbooks/varnish.git
+[submodule "cookbooks/sudo"]
+	path = cookbooks/sudo
+	url = git://github.com/opscode-cookbooks/sudo.git
+[submodule "cookbooks/fail2ban"]
+	path = cookbooks/fail2ban
+	url = git://github.com/opscode-cookbooks/fail2ban.git
+[submodule "cookbooks/ohai"]
+	path = cookbooks/ohai
+	url = git://github.com/opscode-cookbooks/ohai.git
+[submodule "cookbooks/runit"]
+	path = cookbooks/runit
+	url = git://github.com/opscode-cookbooks/runit.git
+[submodule "cookbooks/application_python"]
+	path = cookbooks/application_python
+	url = git://github.com/opscode-cookbooks/application_python.git
+[submodule "cookbooks/application"]
+	path = cookbooks/application
+	url = git://github.com/opscode-cookbooks/application.git
+[submodule "cookbooks/openssl"]
+	path = cookbooks/openssl
+	url = git://github.com/opscode-cookbooks/openssl.git
+[submodule "cookbooks/nginx"]
+	path = cookbooks/nginx
+	url = git://github.com/gchef/nginx-cookbook.git
