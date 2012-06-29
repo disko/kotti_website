@@ -8,10 +8,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.txt')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 
-requires = ['cuisine',
-            'fabric',
-            'fabric-provision',
-            'kotti>=0.7dev',
+requires = ['kotti>=0.7dev',
             'kotti_calendar',
             'kotti_gallery',
             'kotti_video',
