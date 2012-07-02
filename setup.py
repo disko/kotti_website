@@ -12,6 +12,7 @@ requires = ['kotti>=0.7dev',
             'kotti_calendar',
             'kotti_gallery',
             'kotti_video',
+            'psycopg2',
             'pyramid_debugtoolbar',
             'waitress', ]
 
