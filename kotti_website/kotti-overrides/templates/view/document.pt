@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      metal:use-macro="api.macro('kotti:templates/view/master.pt')">
+
+  <article metal:fill-slot="content" class="document-view content">
+    <div class="hero-unit">
+      <h1>${context.title}</h1>
+      <p>${context.description}</p>
+    </div>
+    <div class="body" tal:content="structure context.body"></div>
+  </article>
+
+</html>

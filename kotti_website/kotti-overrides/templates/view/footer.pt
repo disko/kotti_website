@@ -2,5 +2,7 @@
 <footer>
     <p class="pull-right">
         &copy; The Kotti CMS developers
+        |
+        Hosted by <a href="http://xo7.de/">Xo7</a>
     </p>
 </footer>
