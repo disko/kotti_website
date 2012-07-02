@@ -1,4 +1,4 @@
-<div i18n:domain="Kotti" tal:define="disable_context_links disable_context_links | False">
+<div class="subnav subnav-fixed" i18n:domain="Kotti" tal:define="disable_context_links disable_context_links | False">
 
   <ul class="nav nav-pills">
     <li class="${api.url() == request.url and 'active' or None}">
