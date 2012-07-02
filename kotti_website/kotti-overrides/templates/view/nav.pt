@@ -18,6 +18,7 @@
           </li>
         </ul>
       </div>
+      <div tal:replace="api.render_template('kotti:templates/search.pt')" />
     </div>
   </div>
 </div>
