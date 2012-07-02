@@ -11,6 +11,7 @@ CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 requires = ['kotti>=0.7dev',
             'kotti_calendar',
             'kotti_gallery',
+            'kotti_tinymce',
             'kotti_video',
             'psycopg2',
             'pyramid_debugtoolbar',
