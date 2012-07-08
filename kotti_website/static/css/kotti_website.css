@@ -1,11 +1,15 @@
-.navbar-inner {
+body {
+    padding-top: 80px;
+}
+
+body.logged-in {
+    padding-top: 120px;
+}
+
+body.logged-in .navbar-inner {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-}
-
-body, body.logged-in {
-    padding-top: 80px;
 }
 
 span.brand a, span.brand a:hover {
