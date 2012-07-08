@@ -4,8 +4,12 @@
     box-shadow: none;
 }
 
-body, body.logged-in {
+body {
     padding-top: 80px;
+}
+
+body.logged-in {
+    padding-top: 120px;
 }
 
 span.brand a, span.brand a:hover {
