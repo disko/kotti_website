@@ -9,6 +9,7 @@
       <span class="brand">
         <a href="/">Kotti</a>
       </span>
+      <div tal:replace="api.render_template('kotti:templates/search.pt')" />
       <div class="nav-collapse">
         <ul class="nav">
           <li tal:define="items [i for i in api.list_children(api.root) if i.in_navigation]"
@@ -18,7 +19,6 @@
           </li>
         </ul>
       </div>
-      <div tal:replace="api.render_template('kotti:templates/search.pt')" />
     </div>
   </div>
 </div>
