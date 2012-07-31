@@ -1,14 +1,17 @@
+# -*- coding: utf-8 -*-
+
 from setuptools import find_packages
 from setuptools import setup
 import os
 
-version = '0.1'
+version = '0.2'
 
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.txt')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 
-requires = ['kotti>=0.7dev',
+requires = ['js.forkit',
+            'kotti>=0.7dev5',
             'kotti_calendar',
             'kotti_gallery',
             'kotti_tinymce',
@@ -16,6 +19,10 @@ requires = ['kotti>=0.7dev',
             'psycopg2',
             'pyramid_debugtoolbar',
             'waitress', ]
+
+tests_require = []
+
+development_requires = ['minify', ]
 
 setup(name='kotti_website',
       version=version,
@@ -34,10 +41,11 @@ setup(name='kotti_website',
       include_package_data=True,
       zip_safe=False,
       install_requires=requires,
-      entry_points="""
-        [paste.app_factory]
-        main = kotti_website:main
-        [fanstatic.libraries]
-        ffl = kotti_website.static:lib
-      """,
+      tests_require=tests_require,
+      extras_require={'testing': tests_require,
+                      'development': development_requires, },
+      entry_points="""[paste.app_factory]
+                       main = kotti_website:main
+                      [fanstatic.libraries]
+                      ffl = kotti_website.static:lib""",
       )
