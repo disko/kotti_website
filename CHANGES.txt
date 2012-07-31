@@ -1,4 +1,15 @@
-0.0
+0.2
 ---
 
--  Initial version
+- Remove most CSS and template overrides.
+  These are in Kotti itself as of 0.7dev5.
+
+- Add "fork me on github" badge.
+
+- Add minify command for automatic CSS/JS minification.
+  See Kotti 0.7dev5 changes for details.
+
+0.1
+---
+
+- Initial version
