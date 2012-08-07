@@ -5,3 +5,7 @@ a.forkit {
 body.logged-in a.forkit {
     display: none;
 }
+
+input {
+    height: 28px;
+}
