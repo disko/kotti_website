@@ -4,7 +4,7 @@ from setuptools import find_packages
 from setuptools import setup
 import os
 
-version = '0.2'
+version = '0.3'
 
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.txt')).read()
@@ -14,9 +14,11 @@ requires = ['js.forkit',
             'kotti>=0.7dev5',
             'kotti_calendar',
             'kotti_gallery',
+            'kotti_site_gallery',
             'kotti_tinymce',
             'kotti_video',
             'psycopg2',
+            'pyramid==1.3.4',
             'pyramid_debugtoolbar',
             'waitress', ]
 
