@@ -10,44 +10,47 @@ here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.txt')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 
-requires = ['js.forkit',
-            'kotti>=0.8a',
-            'kotti_calendar',
-            'kotti_gallery',
-            'kotti_site_gallery',
-            'kotti_tinymce',
-            'kotti_video',
-            'psycopg2',
-            'pyramid',
-            'pyramid_debugtoolbar',
-            'waitress', ]
+requires = [
+    'kotti>=0.10b1',
+    'kotti_site_gallery',
+    'kotti_tinymce',
+    'psycopg2',
+    'pyramid',
+]
 
 tests_require = []
 
 development_requires = ['minify', ]
 
-setup(name='kotti_website',
-      version=version,
-      description="Kotti CMS Website",
-      long_description="""Website of the Kotti Content Management System""",
-      classifiers=["Programming Language :: Python",
-                   "Framework :: Pylons",
-                   "Topic :: Internet :: WWW/HTTP",
-                   "Topic :: Internet :: WWW/HTTP :: WSGI :: Application", ],
-      keywords='web pyramid pylons',
-      author='Andreas Kaiser',
-      author_email='disko@binary-punks.com',
-      url='http://www.kotti-cms.org/',
-      license='BSD-derived (http://www.repoze.org/LICENSE.txt)',
-      packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
-      include_package_data=True,
-      zip_safe=False,
-      install_requires=requires,
-      tests_require=tests_require,
-      extras_require={'testing': tests_require,
-                      'development': development_requires, },
-      entry_points="""[paste.app_factory]
-                       main = kotti_website:main
-                      [fanstatic.libraries]
-                      ffl = kotti_website.static:lib""",
-      )
+setup(
+    name='kotti_website',
+    version=version,
+    description="Kotti CMS Website",
+    long_description="""Website of the Kotti Content Management System""",
+    classifiers=["Programming Language :: Python",
+                 "Framework :: Pylons",
+                 "Topic :: Internet :: WWW/HTTP",
+                 "Topic :: Internet :: WWW/HTTP :: WSGI :: Application", ],
+    keywords='web pyramid pylons',
+    author='Andreas Kaiser',
+    author_email='disko@binary-punks.com',
+    url='http://www.kotti-cms.org/',
+    license='BSD-derived (http://www.repoze.org/LICENSE.txt)',
+    packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
+    include_package_data=True,
+    zip_safe=False,
+    install_requires=requires,
+    tests_require=tests_require,
+    extras_require={
+        'testing': tests_require,
+        'development': development_requires,
+    },
+    entry_points={
+        "paste.app_factory": [
+            "main = kotti_website:main",
+        ],
+        "fanstatic.libraries": [
+            "ffl = kotti_website.static:lib",
+        ],
+    },
+)
