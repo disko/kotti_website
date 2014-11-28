@@ -11,14 +11,14 @@ README = open(os.path.join(here, 'README.txt')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 
 requires = ['js.forkit',
-            'kotti>=0.7dev5',
+            'kotti>=0.8a',
             'kotti_calendar',
             'kotti_gallery',
             'kotti_site_gallery',
             'kotti_tinymce',
             'kotti_video',
             'psycopg2',
-            'pyramid==1.3.4',
+            'pyramid',
             'pyramid_debugtoolbar',
             'waitress', ]
 
