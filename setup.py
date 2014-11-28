@@ -1,56 +1,57 @@
-# -*- coding: utf-8 -*-
-
-from setuptools import find_packages
-from setuptools import setup
 import os
 
-version = '0.3'
+from setuptools import setup
+from setuptools import find_packages
 
 here = os.path.abspath(os.path.dirname(__file__))
-README = open(os.path.join(here, 'README.txt')).read()
-CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
+try:
+    README = open(os.path.join(here, 'README.rst')).read()
+except IOError:
+    README = ''
+try:
+    CHANGES = open(os.path.join(here, 'CHANGES.rst')).read()
+except IOError:
+    CHANGES = ''
 
-requires = [
-    'kotti>=0.10b1',
+version = '0.4dev'
+
+install_requires = [
+    'Kotti>=0.10b1',
     'kotti_site_gallery',
-    'kotti_tinymce',
     'psycopg2',
-    'pyramid',
 ]
 
-tests_require = []
-
-development_requires = ['minify', ]
 
 setup(
     name='kotti_website',
     version=version,
-    description="Kotti CMS Website",
-    long_description="""Website of the Kotti Content Management System""",
-    classifiers=["Programming Language :: Python",
-                 "Framework :: Pylons",
-                 "Topic :: Internet :: WWW/HTTP",
-                 "Topic :: Internet :: WWW/HTTP :: WSGI :: Application", ],
-    keywords='web pyramid pylons',
-    author='Andreas Kaiser',
-    author_email='disko@binary-punks.com',
-    url='http://www.kotti-cms.org/',
-    license='BSD-derived (http://www.repoze.org/LICENSE.txt)',
-    packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
+    description="Kotti Website",
+    long_description='\n\n'.join([README, CHANGES]),
+    classifiers=[
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 2.6",
+        "Programming Language :: Python :: 2.7",
+        "Framework :: Pylons",
+        "Topic :: Internet :: WWW/HTTP",
+        "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+        "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+        "License :: Repoze Public License",
+    ],
+    author='Kotti developers',
+    author_email='kotti@googlegroups.com',
+    url='https://github.com/disko/kotti_website',
+    keywords='kotti web cms wcms pylons pyramid sqlalchemy bootstrap',
+    license="BSD-derived (http://www.repoze.org/LICENSE.txt)",
+    packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
-    install_requires=requires,
-    tests_require=tests_require,
-    extras_require={
-        'testing': tests_require,
-        'development': development_requires,
-    },
+    install_requires=install_requires,
+    tests_require=[],
+    dependency_links=[],
     entry_points={
-        "paste.app_factory": [
-            "main = kotti_website:main",
-        ],
-        "fanstatic.libraries": [
-            "ffl = kotti_website.static:lib",
+        'fanstatic.libraries': [
+            'kotti_website = kotti_website.fanstatic:library',
         ],
     },
+    extras_require={},
 )
