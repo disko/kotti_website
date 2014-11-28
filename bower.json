@@ -1,0 +1,19 @@
+{
+  "name": "kotti_website",
+  "version": "1.0.0",
+  "homepage": "https://github.com/disko/kotti_website",
+  "authors": [
+    "Andreas Kaiser <disko@binary-punks.com>"
+  ],
+  "description": "Kotti Website",
+  "license": "BSD",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.1",
+    "github-fork-ribbon-css": "~0.1.1"
+  }
+}
