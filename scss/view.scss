@@ -1,0 +1,18 @@
+@import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
+@import 'variables';
+
+/** Put here CSS that should apply to both public and editor screens. **/
+
+#navbar-view {
+  /* We want the edit bar directly below the main navbar. */
+  margin-bottom: 0px;
+}
+
+/* workflow states */
+.state-public {
+  color: #468847;
+}
+
+.state-private {
+  color: #B94A48;
+}

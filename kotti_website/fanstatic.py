@@ -14,13 +14,24 @@ from fanstatic import Resource
 
 library = Library("kotti_website", "static")
 
-css = Resource(
+view_css = Resource(
     library,
-    "styles.css",
-    minified="styles.min.css")
-js = Resource(
+    "view.css",
+    minified="view.min.css")
+view_js = Resource(
     library,
-    "scripts.js",
-    minified="scripts.min.js")
+    "view.js",
+    minified="view.min.js")
+view_needed = Group([view_css, view_js, ])
 
-css_and_js = Group([css, js])
+edit_css = Resource(
+    library,
+    "edit.css",
+    depends=[view_css, ],
+    minified="edit.min.css")
+edit_js = Resource(
+    library,
+    "edit.js",
+    depends=[view_js, ],
+    minified="edit.min.js")
+edit_needed = Group([edit_css, edit_js, ])

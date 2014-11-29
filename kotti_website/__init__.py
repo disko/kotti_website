@@ -19,7 +19,8 @@ def kotti_configure(settings):
     """
 
     settings['pyramid.includes'] += ' kotti_website'
-    settings['kotti.fanstatic.view_needed'] += ' kotti_website.fanstatic.css_and_js'  # noqa
+    settings['kotti.fanstatic.view_needed'] = 'kotti_website.fanstatic.view_needed'  # noqa
+    settings['kotti.fanstatic.edit_needed'] = 'kotti_website.fanstatic.edit_needed'  # noqa
 
 
 def includeme(config):
